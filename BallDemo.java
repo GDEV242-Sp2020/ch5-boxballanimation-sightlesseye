@@ -14,6 +14,11 @@ import java.util.ArrayList;
  * @version 2.1.2020
  * 
  * Extra credit was attempted.
+ * I also tried to make the balls slowly stop rolling on the ground,
+ * as opposed to rolling at full speed forever, but they look as if they 
+ * stop abruptly since their top speed is 7 and we ca only decrement ints by 1.
+ * Also, not all balls stop, but that's because I was trying to do extra and 
+ * couldnt.
  */
 
 public class BallDemo   

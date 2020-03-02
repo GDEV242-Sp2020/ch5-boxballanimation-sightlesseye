@@ -12,7 +12,7 @@ public class BoxBall
 {
     private static final int GRAVITY = 3;  // effect of gravity
     
-    private int ballDegradation = 2;
+    private int ballDegradation = 1;
     private Ellipse2D.Double circle;
     private Color color;
     private int diameter;
@@ -156,7 +156,7 @@ public class BoxBall
         }
         
         //if ySpeed = 0 slow roll
-        if((ySpeed==0) && (yPosition == groundPosition - diameter)) {
+        if((ySpeed==0) && ((yPosition + diameter + 1 >= groundPosition))) {
             if(xSpeed > 0) xSpeed -= 1;
             if(xSpeed < 0) xSpeed += 1;
         }
