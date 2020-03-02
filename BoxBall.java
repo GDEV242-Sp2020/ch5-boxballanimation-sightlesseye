@@ -25,7 +25,7 @@ public class BoxBall
     private Canvas canvas;
     private int ySpeed;
     private int xSpeed;
-    private Random randy;
+    private Random randy = new Random();
     
     /**
      * Creates a standard BoxBall.
@@ -49,18 +49,22 @@ public class BoxBall
      * randomized BoxBall, based on the inputted boolean value.
      */
     public BoxBall(int offset, Canvas canva) {
-        xPosition = randy.nextInt(100+offset+offset) + 
-                    20 - offset;
-        yPosition = randy.nextInt(100+offset+offset) + 
-                    20 - offset;
+        xPosition = randy.nextInt(500+offset+offset) + 
+                    50 - offset;
+        yPosition = randy.nextInt(250+offset+offset) + 
+                    50 - offset;
+                    
         color = new Color(randy.nextInt(225),
                           randy.nextInt(225),
                           randy.nextInt(225));
+                          
         diameter = randy.nextInt(16) + 10;
-        groundPosition = 120 + offset;
-        leftWallPosition = 20 - offset;
-        rightWallPosition = 120 + offset;
-        roofPosition = 20 - offset;
+        
+        groundPosition = 300 + offset;
+        leftWallPosition = 50 - offset;
+        rightWallPosition = 550 + offset;
+        roofPosition = 50 - offset;
+        
         canvas = canva;
         ySpeed = randy.nextInt(14) - 7;
         if(ySpeed == 0) ySpeed = 7;
@@ -134,8 +138,8 @@ public class BoxBall
         }
         
         //check if it has hit the left wall
-        if(xPosition <= (leftWallPosition - diameter)) {
-            xPosition = (int)(leftWallPosition - diameter);
+        if(xPosition <= (leftWallPosition + diameter)) {
+            xPosition = (int)(leftWallPosition + diameter);
             xSpeed = -xSpeed;
         }
         
@@ -146,9 +150,15 @@ public class BoxBall
         }
         
         //check if it has hit the roof
-        if(yPosition <= (roofPosition - diameter)) {
-            yPosition = (int)(roofPosition - diameter);
+        if(yPosition <= (roofPosition + diameter)) {
+            yPosition = (int)(roofPosition + diameter);
             ySpeed = -ySpeed + ballDegradation;
+        }
+        
+        //if ySpeed = 0 slow roll
+        if((ySpeed==0) && (yPosition == groundPosition - diameter)) {
+            if(xSpeed > 0) xSpeed -= 1;
+            if(xSpeed < 0) xSpeed += 1;
         }
        
         // draw again at new position

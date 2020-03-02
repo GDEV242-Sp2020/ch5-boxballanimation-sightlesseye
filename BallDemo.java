@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class BallDemo   
 {
     private Canvas myCanvas;
-    private Random randy;
+    private Random randy = new Random();
 
     /**
      * Create a BallDemo object. Creates a fresh canvas and makes it visible.
@@ -61,17 +61,28 @@ public class BallDemo
     }
     
     public void ballBounce(int balls) {
-        int offset = randy.nextInt(11) - 5;
+        int offset = randy.nextInt(61) - 30;
+        myCanvas.drawLine((50-offset), (50-offset), (550+offset), (50-offset));
+        myCanvas.drawLine((50-offset), (50-offset), (50-offset), (300+offset));
+        myCanvas.drawLine((550+offset), (300+offset), (550+offset), (50-offset));
+        myCanvas.drawLine((550+offset), (300+offset), (50-offset), (300+offset));
+        
         ArrayList<BoxBall> sack = new ArrayList<BoxBall>();
         
         for(int i = 0; i < balls; i++) {
             sack.add(new BoxBall(offset,myCanvas));
         }
         
-        while(areBouncing(sack)) {
+        for(int j = 0; j <= 200; j++) {
+            //System.out.println(j);
+            myCanvas.wait(50);
             for(BoxBall ball : sack) {
                 ball.move();
             }
+            myCanvas.drawLine((50-offset), (50-offset), (550+offset), (50-offset));
+            myCanvas.drawLine((50-offset), (50-offset), (50-offset), (300+offset));
+            myCanvas.drawLine((550+offset), (300+offset), (550+offset), (50-offset));
+            myCanvas.drawLine((550+offset), (300+offset), (50-offset), (300+offset));
         }
         
     }
