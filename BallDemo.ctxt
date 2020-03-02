@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=BallDemo
-comment0.text=\r\n\ Class\ BallDemo\ -\ a\ short\ demonstration\ showing\ animation\ with\ the\ \r\n\ Canvas\ class.\ \r\n\r\n\ @author\ Bill\ Crosbie\r\n\ @version\ 2015-March-BB\r\n\r\n\ @author\ Ryan\ Canuel\r\n\ \r\n\ @version\ 2.1.2020\r\n\ \r\n\ Extra\ credit\ was\ attempted.\r\n
+comment0.text=\r\n\ Class\ BallDemo\ -\ a\ short\ demonstration\ showing\ animation\ with\ the\ \r\n\ Canvas\ class.\ \r\n\r\n\ @author\ Bill\ Crosbie\r\n\ @version\ 2015-March-BB\r\n\r\n\ @author\ Ryan\ Canuel\r\n\ \r\n\ @version\ 2.1.2020\r\n\ \r\n\ Extra\ credit\ was\ attempted.\r\n\ I\ also\ tried\ to\ make\ the\ balls\ slowly\ stop\ rolling\ on\ the\ ground,\r\n\ as\ opposed\ to\ rolling\ at\ full\ speed\ forever,\ but\ they\ look\ as\ if\ they\ \r\n\ stop\ abruptly\ since\ their\ top\ speed\ is\ 7\ and\ we\ ca\ only\ decrement\ ints\ by\ 1.\r\n\ Also,\ not\ all\ balls\ stop,\ but\ that's\ because\ I\ was\ trying\ to\ do\ extra\ and\ \r\n\ couldnt.\r\n
 comment1.params=
 comment1.target=BallDemo()
 comment1.text=\r\n\ Create\ a\ BallDemo\ object.\ Creates\ a\ fresh\ canvas\ and\ makes\ it\ visible.\r\n
