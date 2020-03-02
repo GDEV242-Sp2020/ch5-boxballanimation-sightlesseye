@@ -6,10 +6,9 @@ import java.awt.geom.*;
  * Class Canvas - a class to allow for simple graphical 
  * drawing on a canvas.
  * 
- * @author Michael Kölling (mik)
- * @author Bruce Quig
+ * @author Ryan Canuel
  *
- * @version 2011.07.31
+ * @version 3.1.2020
  */
 
 public class Canvas

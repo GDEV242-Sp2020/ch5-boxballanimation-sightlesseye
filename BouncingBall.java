@@ -9,11 +9,9 @@ import java.awt.geom.*;
  *
  * This movement can be initiated by repeated calls to the "move" method.
  * 
- * @author Michael Kölling (mik)
- * @author David J. Barnes
- * @author Bruce Quig
+ * @author Ryan Canuel
  *
- * @version 2011.07.31
+ * @version 3.1.2020
  */
 
 public class BouncingBall

@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=BoxBall
+comment0.text=\r\n\ BoxBall\ simulates\ a\ bouncing\ ball\ in\ a\ box.\r\n\r\n\ @author\ Ryan\ Canuel,\ writer\ of\ songs\ and\ player\ of\ stringed\ instrument\r\n\ @version\ 3.1.2020\r\n
+comment1.params=
+comment1.target=BoxBall()
+comment1.text=\r\n\ Creates\ a\ standard\ BoxBall.\r\n
+comment2.params=offset\ canva
+comment2.target=BoxBall(int,\ Canvas)
+comment2.text=\r\n\ Creates\ either\ a\ standard\ BoxBall\ or\ a\ slightly\ \r\n\ randomized\ BoxBall,\ based\ on\ the\ inputted\ boolean\ value.\r\n
+comment3.params=xPos\ yPos\ ballDiameter\ ballColor\ groundPos\ leftPos\ rightPos\ roofPos\ drawingCanvas\ ySpee\ xSpee
+comment3.target=BoxBall(int,\ int,\ int,\ java.awt.Color,\ int,\ int,\ int,\ int,\ Canvas,\ int,\ int)
+comment3.text=\r\n\ Creates\ a\ new\ BoxBall\ with\ inputted\ parameters.\r\n
+comment4.params=
+comment4.target=void\ draw()
+comment4.text=\r\n\ Draw\ this\ ball\ at\ its\ current\ position\ onto\ the\ canvas.\r\n
+comment5.params=
+comment5.target=boolean\ isBouncing()
+comment5.text=\r\n\ Returns\ whether\ or\ not\ the\ ball\ is\ still\ bouncing.\r\n
+comment6.params=
+comment6.target=void\ erase()
+comment6.text=\r\n\ Erase\ this\ ball\ at\ its\ current\ position.\r\n
+comment7.params=
+comment7.target=void\ move()
+comment7.text=\r\n\ Move\ this\ ball\ according\ to\ its\ position\ and\ speed\ and\ redraw.\r\n
+numComments=8

@@ -1,4 +1,6 @@
 import java.awt.Color;
+import java.util.Random;
+import java.util.ArrayList;
 
 /**
  * Class BallDemo - a short demonstration showing animation with the 
@@ -7,13 +9,17 @@ import java.awt.Color;
  * @author Bill Crosbie
  * @version 2015-March-BB
  *
- * @author Michael Kölling and David J. Barnes
- * @version 2011.07.31
+ * @author Ryan Canuel
+ * 
+ * @version 2.1.2020
+ * 
+ * Extra credit was attempted.
  */
 
 public class BallDemo   
 {
     private Canvas myCanvas;
+    private Random randy;
 
     /**
      * Create a BallDemo object. Creates a fresh canvas and makes it visible.
@@ -52,5 +58,28 @@ public class BallDemo
                 finished = true;
             }
         }
+    }
+    
+    public void ballBounce(int balls) {
+        int offset = randy.nextInt(11) - 5;
+        ArrayList<BoxBall> sack = new ArrayList<BoxBall>();
+        
+        for(int i = 0; i < balls; i++) {
+            sack.add(new BoxBall(offset,myCanvas));
+        }
+        
+        while(areBouncing(sack)) {
+            for(BoxBall ball : sack) {
+                ball.move();
+            }
+        }
+        
+    }
+    
+    public boolean areBouncing(ArrayList<BoxBall> sack) {
+        for(BoxBall ball : sack) {
+            if(ball.isBouncing()) return true;
+        }
+        return false;
     }
 }
