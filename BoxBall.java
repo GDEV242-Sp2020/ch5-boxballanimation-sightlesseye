@@ -127,14 +127,14 @@ public class BoxBall
         erase();
             
         // compute new position
-        ySpeed += GRAVITY;
+        //ySpeed += GRAVITY;
         yPosition += ySpeed;
         xPosition += xSpeed;
 
         // check if it has hit the ground
         if(yPosition >= (groundPosition - diameter) && ySpeed > 0) {
             yPosition = (int)(groundPosition - diameter);
-            ySpeed = -ySpeed + ballDegradation; 
+            ySpeed = -ySpeed; //+ ballDegradation; 
         }
         
         //check if it has hit the left wall
@@ -152,7 +152,7 @@ public class BoxBall
         //check if it has hit the roof
         if(yPosition <= (roofPosition + diameter)) {
             yPosition = (int)(roofPosition + diameter);
-            ySpeed = -ySpeed + ballDegradation;
+            ySpeed = -ySpeed; //+ ballDegradation;
         }
         
         //if ySpeed = 0 slow roll
